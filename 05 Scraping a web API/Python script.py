@@ -67,6 +67,6 @@ stations_df = pd.DataFrame(stations)
 stations_df.index = np.arange(1, len(stations_df) + 1)
 
 #export to csv file
-readings_df.to_csv(os.getcwd() + '\\readings_df' + f'_{start_date}.csv', header=True)
-stations_df.to_csv(os.getcwd() + '\\stations_df' + f'_{start_date}.csv', header=True)
+readings_df.to_csv(os.getcwd() + '\\readings_df' + f'_{start_date}.csv', index=True, header=True)
+stations_df.to_csv(os.getcwd() + '\\stations_df' + f'_{start_date}.csv', index=True, header=True)
 print(f"Export completed! Files are in the path '{os.getcwd()}'.")
